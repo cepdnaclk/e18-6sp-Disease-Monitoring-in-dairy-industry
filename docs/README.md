@@ -14,9 +14,9 @@ title: Disease Monitoring in dairy industry
 ---
 
 ## Team
--  E/18/154, Jayasumana C.H., [email](mailto:e18154@eng.pdn.ac.lk)
--  E/18/327, Senevirathna M.D.C.D., [email](mailto:e18327@eng.pdn.ac.lk)
--  E/18/349, Thalisha W.G.A.P., [email](mailto:e18349@eng.pdn.ac.lk)
+-  E/18/154, Jayasumana C.H. [email](mailto:e18154@eng.pdn.ac.lk)
+-  E/18/327, Senevirathna M.D.C.D. [email](mailto:e18327@eng.pdn.ac.lk)
+-  E/18/349, Thalisha W.G.A.P. [email](mailto:e18349@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -37,7 +37,9 @@ The web application is the central component of our solution. It provides an int
 
 ## Key features
 
-.....
+1. Data Input: Users can easily enter milk data for individual cows or bulk tank samples, including relevant parameters.
+2. Prediction Results: Once the data is submitted, the machine learning model analyzes the input and provides predictions on the likelihood of Subclinical Mastitis positivity. The results are presented in a clear and understandable format.
+3. Data Visualization: The web application offers interactive charts and graphs to visualize the data and trends associated with Subclinical Mastitis. This visual representation assists users in comprehending and interpreting the information effectively.
 
 ## Links
 
