@@ -3,13 +3,13 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-XXX-project-template
-title:
+repository-name: e18-6sp-Disease-Monitoring-in-dairy-industry
+title:Disease Monitoring in dairy industry
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# Monitoring in dairy industry
 
 ---
 
@@ -19,9 +19,9 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/18/154, Jayasumana C.H., [email](mailto:e18154@eng.pdn.ac.lk)
+-  E/18/327, Senevirathna M.D.C.D., [email](mailto:e18327@eng.pdn.ac.lk)
+-  E/18/349, Thalisha W.G.A.P., [email](mailto:e18349@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
