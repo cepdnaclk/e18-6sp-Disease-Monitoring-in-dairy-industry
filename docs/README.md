@@ -13,11 +13,6 @@ title: Disease Monitoring in dairy industry
 
 ---
 
-This is a sample image, to show how to add images to your page. To learn more options, please refer [this](https://projects.ce.pdn.ac.lk/docs/faq/how-to-add-an-image/)
-
-![Sample Image](./images/sample.png)
-
-
 ## Team
 -  E/18/154, Jayasumana C.H., [email](mailto:e18154@eng.pdn.ac.lk)
 -  E/18/327, Senevirathna M.D.C.D., [email](mailto:e18327@eng.pdn.ac.lk)
