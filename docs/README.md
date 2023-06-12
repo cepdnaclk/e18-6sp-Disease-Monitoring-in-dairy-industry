@@ -41,6 +41,9 @@ The web application is the central component of our solution. It provides an int
 2. Prediction Results: Once the data is submitted, the machine learning model analyzes the input and provides predictions on the likelihood of Subclinical Mastitis positivity. The results are presented in a clear and understandable format.
 3. Data Visualization: The web application offers interactive charts and graphs to visualize the data and trends associated with Subclinical Mastitis. This visual representation assists users in comprehending and interpreting the information effectively.
 
+Our Disease Monitoring web application empowers dairy farmers and industry professionals with an efficient and accurate tool for early detection and prevention of Subclinical Mastitis in their herds. By utilizing machine learning and milk quality data, we aim to improve the overall health and productivity of dairy cows, ultimately benefiting the dairy industry as a whole.
+
+
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/{{ e18-6sp-Disease-Monitoring-in-dairy-industry }}){:target="_blank"}
