@@ -47,7 +47,7 @@ Our Disease Monitoring web application empowers dairy farmers and industry profe
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/e18-6sp-Disease-Monitoring-in-dairy-industry)
-- [Project Page](https://cepdnaclk.github.io/e18-6sp-Disease-Monitoring-in-dairy-industry)
+- [Project Page](https://cepdnaclk.github.io/e18-6sp-Disease-Monitoring-in-dairy-industry/)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
