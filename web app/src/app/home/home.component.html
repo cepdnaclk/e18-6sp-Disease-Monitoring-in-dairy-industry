@@ -1,0 +1,56 @@
+<body>
+    <div class="container">
+        <div class="left-section">
+          <input type="file" (change)="onFileSelected($event)">
+            <br>
+          <button (click)="onSubmit()">Submit</button>
+        </div>
+        <div class="right-section">
+            <div class="right-top">
+                <form>
+                  <br>
+                    <label for="input1">DIM( Days In Milk ):</label>
+                    <input id="input1" [value]="DIM" (input)="updateData($event, 'dim')"><br>
+
+                    <label for="input2">Avg(7 days). Daily MY( L ):</label>
+                    <input id="input2" [value]="DIM" (input)="updateData($event, 'avg')"><br>
+
+                    <label for="input3">Kg. milk 305 ( Kg ):</label>
+                    <input id="input3" [value]="DIM" (input)="updateData($event, 'milk305')"><br>
+
+                    <label for="input4">Fat (%):</label>
+                    <input id="input4" [value]="DIM" (input)="updateData($event, 'fat')"><br>
+
+                    <label for="input5">SNF (%):</label>
+                    <input id="input5" [value]="DIM" (input)="updateData($event, 'snf')"><br>
+
+                    <label for="input6">Density ( Kg/ m3 ):</label>
+                    <input id="input6" [value]="DIM" (input)="updateData($event, 'density')"><br>
+                </form>
+            </div>
+            <div class="right-bottom">
+                <form>
+                    <label for="input10">Protein (%):</label>
+                    <input id="input10" [value]="DIM" (input)="updateData($event, 'protein')"><br>
+
+                    <label for="input11">Conductivity (mS/cm):</label>
+                    <input id="input11" [value]="DIM" (input)="updateData($event, 'conductivity')"><br>
+
+                    <label for="input12">pH:</label>
+                    <input id="input12" [value]="DIM" (input)="updateData($event, 'ph')"><br>
+
+                    <label for="input13">Freezing point (C):</label>
+                    <input id="input13" [value]="DIM" (input)="updateData($event, 'freezingPoint')"><br>
+
+                    <label for="input14">Salt (%):</label>
+                    <input id="input14" [value]="DIM" (input)="updateData($event, 'salt')"><br>
+
+                    <label for="input15">Lactose (%):</label>
+                    <input id="input15" [value]="DIM" (input)="updateData($event, 'lactose')"><br>
+                </form>
+                <br>
+                <button (click)="onSubmit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
