@@ -13,20 +13,20 @@ def predict():
         data = pd.DataFrame(json_data, index=[0])
         query_df = data[['DIM( Days In Milk)','Avg(7 days). Daily MY( L )', 'Kg. milk 305 ( Kg )', 'Fat (%)' , 'SNF (%)', 'Density ( Kg/ m3','Protein (%)','Conductivity (mS/cm)','pH','Freezing point (⁰C)','Salt (%)','Lactose (%)']]
         prediction = model.predict(query_df)
-        return jsonify({"Prediction" : list(prediction.astype(str))})
+        return jsonify({"Prediction" : list(prediction.astype(str))}),200
     else:
-        return jsonify({"error": "Request is not in JSON format"})
+        return jsonify({"error": "Request is not in JSON format"}),500
 
 @app.route("/predict/csv" , methods = ["GET"])
 def predict_csv():
     #assume csv_file is the file name in the frontend, change it necessarily
     if 'csv_file' not in request.files:
-        return "No file part"
+        return "No file part", 400
 
     file = request.files['csv_file']
 
     if file.filename == '':
-        return "No selected file"
+        return "No selected file",400
     
     if file:
         try:
@@ -35,10 +35,10 @@ def predict_csv():
             index_df = data['Sample No']
             prediction = model.predict(query_df)
 
-            return jsonify({"Sample No" : list(index_df.astype(str)),"Prediction" : list(prediction.astype(str))})
+            return jsonify({"Sample No" : list(index_df.astype(str)),"Prediction" : list(prediction.astype(str))}),200
         
         except Exception as e:
-            return jsonify({"error": f"An error occurred: {str(e)}"})
+            return jsonify({"error": f"An error occurred: {str(e)}"}),500
 
 if __name__ == "__main__" :
     app.run(debug=True)
