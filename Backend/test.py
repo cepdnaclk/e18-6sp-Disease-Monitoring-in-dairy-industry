@@ -45,11 +45,11 @@ class FlaskTest(unittest.TestCase):
         self.assertTrue("error" in data)
         self.assertEqual(data["error"], "Request is not in JSON format")
     
-    def test_predict_csv_with_valid_file(self):
+    def test_predict_excel_with_valid_file(self):
         # Prepare a mock file upload
         with open("test_data.xlsx", "rb") as file:
             file_storage = FileStorage(file)
-            response = self.client.get('/predict/csv', data={'csv_file': file_storage})
+            response = self.client.get('/predict/excel', data={'excel_file': file_storage})
 
         data = response.get_json()
 
@@ -57,8 +57,8 @@ class FlaskTest(unittest.TestCase):
         self.assertTrue("Sample No" in data)
         self.assertTrue("Prediction" in data)
     
-    def test_predict_csv_with_no_file(self):
-        response = self.client.get('/predict/csv')
+    def test_predict_excel_with_no_file(self):
+        response = self.client.get('/predict/excel')
 
         self.assertEqual(response.status_code, 400)
 

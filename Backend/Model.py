@@ -22,7 +22,7 @@ X_train = encoder.fit_transform(X_train)
 X_test = encoder.transform(X_test)
 
 # Create decision treeclassifier object
-clf_gini = DecisionTreeClassifier(criterion='gini',max_depth=4,random_state=0) # Use the gini index as the criterion
+clf_gini = DecisionTreeClassifier(criterion='gini',max_depth=2,random_state=0) # Use the gini index as the criterion
 clf_gini.fit(X_train, y_train) # Train the classifier
 
 with open("model.pkl", "wb") as file:
