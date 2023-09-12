@@ -4,65 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <dev>
-    <h1>Prediction Form</h1>
-    <form id="predictionForm">
-        <label for="sampleNo">Sample No:</label>
-        <input type="text" id="sampleNo" name="Sample No" required><br>
+    <h1>Predict Subclinical Mastitis From Milk Data</h1>
+    <div class="container">
+        <div class="left-column">
+            <h2>Prediction Form</h2>
+            <form id="predictionForm">
+                <label for="sampleNo">Sample No:</label>
+                <input type="text" id="sampleNo" name="Sample No" required><br>
 
-        <label for="dim">DIM (Days In Milk):</label>
-        <input type="text" id="dim" name="DIM( Days In Milk)" required><br>
+                <label for="dim">DIM (Days In Milk):</label>
+                <input type="text" id="dim" name="DIM( Days In Milk)" required><br>
 
-        <label for="avgDailyMy">Avg(7 days). Daily MY( L ):</label>
-        <input type="text" id="avgDailyMy" name="Avg(7 days). Daily MY( L )" required><br>
+                <label for="avgDailyMy">Avg(7 days). Daily MY( L ):</label>
+                <input type="text" id="avgDailyMy" name="Avg(7 days). Daily MY( L )" required><br>
 
-        <label for="milk305">Kg. milk 305 (Kg):</label>
-        <input type="text" id="milk305" name="Kg. milk 305 ( Kg )" required><br>
+                <label for="milk305">Kg. milk 305 (Kg):</label>
+                <input type="text" id="milk305" name="Kg. milk 305 ( Kg )" required><br>
 
-        <label for="fat">Fat (%):</label>
-        <input type="text" id="fat" name="Fat (%)" required><br>
+                <label for="fat">Fat (%):</label>
+                <input type="text" id="fat" name="Fat (%)" required><br>
 
-        <label for="snf">SNF (%):</label>
-        <input type="text" id="snf" name="SNF (%)" required><br>
+                <label for="snf">SNF (%):</label>
+                <input type="text" id="snf" name="SNF (%)" required><br>
 
-        <label for="density">Density (Kg/m3):</label>
-        <input type="text" id="density" name="Density ( Kg/ m3" required><br>
+                <label for="density">Density (Kg/m3):</label>
+                <input type="text" id="density" name="Density ( Kg/ m3" required><br>
 
-        <label for="protein">Protein (%):</label>
-        <input type="text" id="protein" name="Protein (%)" required><br>
+                <label for="protein">Protein (%):</label>
+                <input type="text" id="protein" name="Protein (%)" required><br>
 
-        <label for="conductivity">Conductivity (mS/cm):</label>
-        <input type="text" id="conductivity" name="Conductivity (mS/cm)" required><br>
+                <label for="conductivity">Conductivity (mS/cm):</label>
+                <input type="text" id="conductivity" name="Conductivity (mS/cm)" required><br>
 
-        <label for="ph">pH:</label>
-        <input type="text" id="ph" name="pH" required><br>
+                <label for="ph">pH:</label>
+                <input type="text" id="ph" name="pH" required><br>
 
-        <label for="freezingPoint">Freezing point (⁰C):</label>
-        <input type="text" id="freezingPoint" name="Freezing point (⁰C)" required><br>
+                <label for="freezingPoint">Freezing point (⁰C):</label>
+                <input type="text" id="freezingPoint" name="Freezing point (⁰C)" required><br>
 
-        <label for="salt">Salt (%):</label>
-        <input type="text" id="salt" name="Salt (%)" required><br>
+                <label for="salt">Salt (%):</label>
+                <input type="text" id="salt" name="Salt (%)" required><br>
 
-        <label for="lactose">Lactose (%):</label>
-        <input type="text" id="lactose" name="Lactose (%)" required><br>
+                <label for="lactose">Lactose (%):</label>
+                <input type="text" id="lactose" name="Lactose (%)" required><br>
 
-        <button type="submit">Predict</button>
-    </form>
-    </dev>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+        <div class="right-column">
+            <div class="top-right">
+                <h2>Upload CSV or XLSX File</h2>
+                <form id="fileUploadForm">
+                    <input type="file" id="fileInput" name="csv_file" accept=".csv,.xlsx" required onchange="updateFileName(this)">
+                    <label for="fileInput" class="file-input-label">Choose a file</label>
+                    <div id="fileName" class="showFileName">No file selected</div>
 
-    <dev>
-        <h2>Upload CSV File</h2>
-        <form id="fileUploadForm">
-            <input type="file" id="fileInput" name="csv_file" accept=".csv,.xlsx" required>
-            <button type="submit">Upload File</button>
-        </form>
-    </dev>
-    <h2>Prediction Result</h2>
-    <pre id="predictionResult"></pre>
-    
+                    <button type="submit">Predict</button>
+                </form>
+            </div>
+            <div class="bottom-right">
+                <h2>Prediction Result</h2>
+                <pre id="predictionResult"></pre>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
-
 </body>
 </html>

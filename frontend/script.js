@@ -103,3 +103,11 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     });
 });
 
+function updateFileName(input) {
+    const fileNameDisplay = document.getElementById("fileName");
+    if (input.files.length > 0) {
+        fileNameDisplay.textContent = input.files[0].name;
+    } else {
+        fileNameDisplay.textContent = "No file selected";
+    }
+}
