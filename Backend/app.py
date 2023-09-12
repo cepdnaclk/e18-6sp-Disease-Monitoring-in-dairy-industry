@@ -17,13 +17,13 @@ def predict():
     else:
         return jsonify({"error": "Request is not in JSON format"}),500
 
-@app.route("/predict/csv" , methods = ["GET"])
-def predict_csv():
+@app.route("/predict/excel" , methods = ["GET"])
+def predict_excel():
     #assume csv_file is the file name in the frontend, change it necessarily
-    if 'csv_file' not in request.files:
+    if 'excel_file' not in request.files:
         return "No file part", 400
 
-    file = request.files['csv_file']
+    file = request.files['excel_file']
 
     if file.filename == '':
         return "No selected file",400
