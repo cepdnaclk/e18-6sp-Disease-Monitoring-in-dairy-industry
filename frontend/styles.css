@@ -1,0 +1,93 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    flex: 1;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.right-column {
+    flex: 1;
+}
+
+.top-right {
+    margin-bottom: 20px;
+}
+
+/* Left column form label and input fields */
+.left-column form label {
+    display: inline-block;
+    width: 30%; /* Adjust width as needed */
+    margin-right: 10px; /* Add margin between label and input */
+    text-align: right; /* Align label text to the right */
+}
+
+.left-column form input {
+    display: inline-block;
+    width: 40%; /* Adjust width as needed */
+    padding: 5px;
+    margin-bottom: 7px;
+}
+
+/* Buttons */
+form button[type="submit"], .file-input-label {
+    background-color: #007bff; /* Change the background color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 9px 25px; /* Adjust padding as needed */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+.file-input-label {
+    display: inline-block;
+}
+
+.showFileName {
+    display: inline-block;
+}
+
+form button[type="submit"]:hover, form label[for="fileInput"]:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
+
+form input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.left-column form button[type="submit"] {
+    float: right;
+    margin-right: 13%;
+}
+
+.right-column form button[type="submit"] {
+    float: right;
+    margin-right: 30%;
+}
+
+.bottom-right {
+    margin-top: 10%;
+}
+
+.bottom-right pre {
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
