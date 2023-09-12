@@ -1,12 +1,14 @@
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 import pickle
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for your Flask app
 
 model = pickle.load(open("model.pkl","rb"))
 
-@app.route("/predict" , methods = ["GET"])
+@app.route("/predict" , methods = ["POST"])
 def predict():
     if request.is_json:
         json_data = request.json
@@ -17,13 +19,13 @@ def predict():
     else:
         return jsonify({"error": "Request is not in JSON format"}),500
 
-@app.route("/predict/excel" , methods = ["GET"])
-def predict_excel():
+@app.route("/predict/csv" , methods = ["POST"])
+def predict_csv():
     #assume csv_file is the file name in the frontend, change it necessarily
-    if 'excel_file' not in request.files:
+    if 'csv_file' not in request.files:
         return "No file part", 400
 
-    file = request.files['excel_file']
+    file = request.files['csv_file']
 
     if file.filename == '':
         return "No selected file",400
